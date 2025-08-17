@@ -1,5 +1,5 @@
 from rest_framework import viewsets
-from tasks import models, serializers
+from tasks import models, serializers, filters
 
 
 class GrupoViewSet(viewsets.ModelViewSet):
@@ -15,3 +15,4 @@ class EtiquetaViewSet(viewsets.ModelViewSet):
 class TarefaViewSet(viewsets.ModelViewSet):
     queryset = models.Tarefa.objects.all()
     serializer_class = serializers.TarefaSerializer
+    filterset_class = filters.TarefaFilter
