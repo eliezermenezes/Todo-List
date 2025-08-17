@@ -62,5 +62,5 @@ class Tarefa(ModeloBase):
     class Meta:
         db_table = 'tarefa'
         verbose_name = 'Tarefa'
-        verbose_name_plural = 'Tarefaes'
+        verbose_name_plural = 'Tarefas'
         ordering = ['ordem']
