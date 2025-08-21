@@ -18,6 +18,18 @@ class TarefaSerializer(serializers.ModelSerializer):
     grupo = GrupoSerializer(read_only=True)
     etiquetas = EtiquetaSerializer(many=True, read_only=True)
 
+    grupo_id = serializers.PrimaryKeyRelatedField(
+        source='grupo',
+        queryset=models.Grupo.objects.all(),
+        write_only=True
+    )
+    etiquetas_ids = serializers.PrimaryKeyRelatedField(
+        source='etiquetas',
+        queryset=models.Etiqueta.objects.all(),
+        many=True,
+        write_only=True
+    )
+
     class Meta:
         model = models.Tarefa
         fields = '__all__'

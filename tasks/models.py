@@ -9,6 +9,7 @@ class ModeloBase(models.Model):
         abstract = True
 
 
+
 class Grupo(ModeloBase):
     nome = models.CharField(max_length=255)
     descricao = models.TextField(blank=True, null=True)

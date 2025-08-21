@@ -6,8 +6,8 @@ from tasks import models
 @admin.register(models.Grupo)
 class GrupoAdmin(admin.ModelAdmin):
     list_display = ('nome', 'descricao', 'criado_em', 'modificado_em')
-    search_fields = ('nome', 'descricao')
-    list_filter = ('criado_em', 'modificado_em')
+    # search_fields = ('nome', 'descricao')
+    # list_filter = ('criado_em', 'modificado_em')
 
 
 @admin.register(models.Etiqueta)
